@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:pUnP.Xamarin1"
+             NavigationPage.HasNavigationBar="false"
+             x:Class="pUnP.Xamarin1.MainPage">
+
+    <StackLayout BackgroundColor="#161044">
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto">
+            <StackLayout Grid.Row="2">
+                <Image Source="https://i.gyazo.com/8e2c4cdbec1910d81e4cc218c72b9d07.png" WidthRequest="200"></Image>
+                <Label Text="Faça o Login"
+                   FontSize="25"
+                   Margin="0,0,0,25"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                <Frame
+                   OutlineColor="White"
+                   BackgroundColor="Transparent"
+                   Margin="15,15,15,0"
+                   Padding="0"
+                   CornerRadius="10"
+                   >
+                    <Frame
+                    OutlineColor="White"
+                    BackgroundColor="Transparent"
+                    Margin="1"
+                    Padding="15,0,25,0"
+                    HeightRequest="55"
+                    CornerRadius="10">
+                        <local:CustomEntry
+                        x:Name="EntryUsuario"
+                        TextColor="White"
+                        FontSize="18"
+                        Placeholder="Usuário"
+                        PlaceholderColor="White"/>
+                    </Frame>
+                </Frame>
+                <Frame
+                   OutlineColor="White"
+                   BackgroundColor="Transparent"
+                   Margin="15,15,15,15"
+                   Padding="0"
+                   CornerRadius="10">
+                    <Frame
+                    OutlineColor="White"
+                    BackgroundColor="Transparent"
+                    Margin="1"
+                    Padding="15,0,25,0"
+                    HeightRequest="55"
+                    CornerRadius="10">
+                        <local:CustomEntry
+                        TextColor="White"
+                        FontSize="18"
+                        Placeholder="Senha"
+                        IsPassword="True"
+                        x:Name="EntrySenha"
+                        PlaceholderColor="White"/>
+                    </Frame>
+                </Frame>
+                <RelativeLayout Padding="25">
+                    <CheckBox 
+                        Color="White" 
+                        IsChecked="False" 
+                        CheckedChanged="CheckBox_CheckedChanged"
+                        x:Name="CheckBox"
+                        Margin="15,0,0,0"
+                        />
+                    <Label
+                       Text="Mostrar Senha"
+                       TextColor="White"
+                       FontSize="18"
+                       RelativeLayout.XConstraint="50"
+                       RelativeLayout.YConstraint="3"/>
+                    <Button
+                        x:Name="EsqueciSenha"
+                        Text="Esqueci minha senha"
+                        TextColor="White"
+                        FontSize="18"
+                        BackgroundColor="Transparent"
+                        RelativeLayout.XConstraint="195"
+                        RelativeLayout.YConstraint="-8"
+                        Clicked="EsqueciSenha_Clicked"
+                        TextTransform="None"/>
+                </RelativeLayout>
+                <Button
+                    x:Name="BotaoLogin"
+                    Text="Login"
+                    FontAttributes="Bold"
+                    TextColor="#161044"
+                    BorderWidth="2"
+                    BorderColor="Transparent"
+                    BackgroundColor="White"
+                    Margin="10,0,10,10"
+                    FontSize="18"
+                    HeightRequest="55"
+                    CornerRadius="10"
+                    Clicked="BotaoLogin_Clicked"/>
+                <Button
+                    x:Name="BotaoRegistro"
+                    Text="Registrar"
+                    FontAttributes="Bold"
+                    TextColor="#161044"
+                    BorderWidth="2"
+                    BorderColor="Transparent"
+                    Margin="10,0,10,0"
+                    FontSize="18"
+                    Clicked="BotaoRegistro_Clicked"
+                    HeightRequest="55"
+                    CornerRadius="10"
+                    BackgroundColor="White"/>
+                <Label x:Name="Erro"></Label>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
