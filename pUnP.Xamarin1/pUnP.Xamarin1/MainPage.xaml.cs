@@ -17,13 +17,13 @@ namespace pUnP.Xamarin1
 
         private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            if (EntrySenha.IsPassword == true)
+            if (EntrySenha.IsPassword == false)
             {
-                EntrySenha.IsPassword = false;
+                EntrySenha.IsPassword = true;
             }
             else
             {
-                EntrySenha.IsPassword = true;
+                EntrySenha.IsPassword = false;
             }
         }
 
@@ -40,15 +40,15 @@ namespace pUnP.Xamarin1
         {
             if (EntryUsuario.Text == null || EntryUsuario.Text == "" && EntrySenha.Text == null || EntrySenha.Text == "")
             {
-                DisplayAlert("Erro", "Usuário e Senha não preenchido corretamente", "Ok");
+                DisplayAlert("Erro", "Usuário e Senha não preenchido", "Ok");
             }
             else if (EntryUsuario.Text == null || EntryUsuario.Text == "")
             {
-                DisplayAlert("Erro", "Usuario não preenchido corretamente", "Ok");
+                DisplayAlert("Erro", "Usuario não preenchido", "Ok");
             }
             else if (EntrySenha.Text == null || EntrySenha.Text == "")
             {
-                DisplayAlert("Erro", "Senha não preenchida corretamente", "Ok");
+                DisplayAlert("Erro", "Senha não preenchida", "Ok");
             }
             else if (EntryUsuario.Text == "admin" && EntrySenha.Text == "123")
             {

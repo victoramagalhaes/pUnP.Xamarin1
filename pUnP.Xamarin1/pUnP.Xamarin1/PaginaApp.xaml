@@ -18,26 +18,30 @@
             </Grid>
             <Grid RowDefinitions="Auto,Auto,Auto,Auto">
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0">
-                    <Image Source="https://i.gyazo.com/8d4bee3c906a8a5785c67c00d931e5a2.png" HeightRequest="200" WidthRequest="200"></Image>
+                    <Image x:Name="imgClima" HeightRequest="200" WidthRequest="200"></Image>
                     <Label Text="POUCAS NUVENS"
+                           x:Name="tipodeclima"
                            FontFamily="Roboto" 
-                           FontSize="12" 
+                           FontSize="13" 
                            FontAttributes="Bold"
                            TextColor="White"
-                           Margin="43,-50,0,0"
+                           HorizontalTextAlignment="Center"
+                           Margin="0,-50,0,0"
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="MIN 23° | MAX 30°"
+                           x:Name="minmax"
                            FontFamily="Roboto" 
-                           FontSize="10" 
+                           FontSize="11" 
                            FontAttributes="None"
                            TextColor="White"
-                           Margin="52,0,0,0"
+                           Margin="43,-5,0,0"
                            CharacterSpacing="0">
                     </Label>
                 </StackLayout>
                 <StackLayout HorizontalOptions="Center" Grid.Column="1">
-                    <Label Text="NATAL/RN"
+                    <Label Text=""
+                           x:Name="cidadepais"
                            FontFamily="Roboto" 
                            FontSize="32" 
                            FontAttributes="Bold"
@@ -46,6 +50,7 @@
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="27°"
+                           x:Name="temperatura"
                            FontFamily="Roboto" 
                            FontSize="108" 
                            FontAttributes="Bold"
@@ -74,12 +79,14 @@
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="50%"
+                           x:Name="umidade"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            FontFamily="Roboto"
                            FontSize="16" 
                            FontAttributes="Bold"
                            TextColor="White"
+                           HorizontalTextAlignment="Center"
                            Margin="0,-5,-5,0"
                            CharacterSpacing="0">
                     </Label>
@@ -102,13 +109,15 @@
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="1.25m/s"
+                           x:Name="vento"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
                            FontFamily="Roboto"
                            FontSize="16" 
                            FontAttributes="Bold"
                            TextColor="White"
-                           Margin="0,-5,-5,0"
+                           Margin="0,-5,3,0"
                            CharacterSpacing="0">
                     </Label>
                 </StackLayout>
@@ -130,13 +139,15 @@
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="1014hpa"
+                           x:Name="pressao"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
                            FontFamily="Roboto"
                            FontSize="16" 
                            FontAttributes="Bold"
                            TextColor="White"
-                           Margin="0,-5,-5,0"
+                           Margin="0,-5,0,0"
                            CharacterSpacing="0">
                     </Label>
                 </StackLayout>
@@ -151,6 +162,7 @@
                     <Label Text="Nuvens"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center"
                            FontFamily="Roboto" 
                            FontSize="13" 
                            FontAttributes="None"
@@ -158,6 +170,7 @@
                            CharacterSpacing="0">
                     </Label>
                     <Label Text="24%"
+                           x:Name="nuvens"
                            VerticalOptions="Center"
                            HorizontalOptions="Center"
                            FontFamily="Roboto"
